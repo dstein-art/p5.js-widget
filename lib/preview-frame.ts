@@ -43,10 +43,10 @@ function loadScripts(urls: string[], cb?: () => void) {
 }
 
 function p5url(version: string) {
-  return `//cdnjs.cloudflare.com/ajax/libs/p5.js/${version}/p5.js`;
+  return `static/lib/${version}/p5.min.js`;
 }
 function p5SoundUrl(version) {
-  return "//cdnjs.cloudflare.com/ajax/libs/p5.js/"+version + "/addons/p5.sound.min.js";
+  return "static/lib/"+version + "/p5.sound.min.js";
 }
 
 function LoopChecker(sketch: string, funcName: string, maxRunTime: number) {
