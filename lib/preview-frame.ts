@@ -49,6 +49,13 @@ function p5SoundUrl(version) {
   return "//cdnjs.cloudflare.com/ajax/libs/p5.js/"+version + "/addons/p5.sound.min.js";
 }
 
+
+function p5PlayUrl(version) {
+  return "//p5play.org/v3/p5play.js";
+}
+function planckUrl(version) {
+  return "//p5play.org/v3/planck.min.js";
+}
 function LoopChecker(sketch: string, funcName: string, maxRunTime: number) {
   let self = {
     wasTriggered: false,
@@ -121,7 +128,7 @@ function startSketch(sketch: string, p5version: string, maxRunTime: number,
   });
 
   loadScripts([
-    p5url(p5version) , p5SoundUrl(p5version)
+    p5url(p5version) , p5SoundUrl(p5version),p5PlayUrl(p5version),planckUrl(p5version)
   ], () => {
     document.body.appendChild(sketchScript);
     if (document.readyState === 'complete') {
